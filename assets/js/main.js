@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const sections = ["about", "services", "connections", "contact"];
+  const sections = ["navbar", "about", "services", "connections", "contact"];
 
   sections.forEach((section) => {
     fetch(`assets/sections/${section}.html`)
