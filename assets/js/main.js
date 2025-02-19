@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const sections = ["navbar", "about", "services", "connections", "contact"];
 
   sections.forEach((section) => {
-    fetch(`/assets/sections/${section}.html`)
+    fetch(`assets/sections/${section}.html`)
       .then((response) => response.text())
       .then((html) => {
         document.getElementById(section).innerHTML = html;
