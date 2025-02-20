@@ -8,25 +8,6 @@ body {
   padding: 0;
 }
 
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: #333;
-  padding: 10px 0;
-  text-align: center;
-  z-index: 1000;
-}
-.navbar a {
-  color: white;
-  text-decoration: none;
-  padding: 10px 20px;
-  display: inline-block;
-}
-.navbar a:hover {
-  background: #555;
-}
-
 .section {
   height: 50vh;
   display: flex;
@@ -35,8 +16,12 @@ body {
   font-size: 24px;
   scroll-margin-top: 60px;
 }
+
+#carousel {
+  background: grey;
+}
 #about {
-  background: #f4f4f4;
+  background: #e6e6e6;
 }
 #services {
   background: #ddd;
