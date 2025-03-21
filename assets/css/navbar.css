@@ -4,6 +4,7 @@
   top: 0;
   width: 100%;
   background: rgba(255, 255, 255, 0.8);
+  height: 80px;
   padding: 20px 0;
   text-align: center;
   z-index: 1000;
@@ -16,8 +17,8 @@
 }
 
 .navbar-container img {
-  width: 5%;
-  height: auto;
+  width: auto;
+  height: 70%;
   margin-right: 16px;
 }
 

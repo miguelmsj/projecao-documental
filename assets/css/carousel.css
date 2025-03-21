@@ -1,3 +1,24 @@
+#carousel {
+  background-image: url("../images/main-carrousel/Carrosel\ 1.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+/* Media query for small screens */
+@media (max-width: 1360px) {
+  #carousel {
+    background-image: url("../images/main-carrousel/Carrosel\ 1.png");
+    background-size: cover;
+  }
+}
+
 .carousel-container {
   display: flex;
   flex-direction: column;
