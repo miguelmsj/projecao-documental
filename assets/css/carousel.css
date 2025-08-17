@@ -1,5 +1,5 @@
 #carousel {
-  background-image: url("../images/main-carrousel/Carrosel\ 1.png");
+  background-image: url('../images/main-carrousel/Carrosel\ 1.png');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -15,8 +15,21 @@
 /* Media query for small screens */
 @media (max-width: 1360px) {
   #carousel {
-    background-image: url("../images/main-carrousel/Carrosel\ 1.png");
+    background-image: url('../images/main-carrousel/Carrosel\ 1.png');
     background-size: cover;
+  }
+}
+
+/* Mobile specific fixes */
+@media (max-width: 768px) {
+  #carousel {
+    max-width: 100vw;
+  }
+
+  .carousel-container {
+    max-width: 100vw;
+    padding: 20px 15px;
+    box-sizing: border-box;
   }
 }
 

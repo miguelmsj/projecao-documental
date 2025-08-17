@@ -34,6 +34,26 @@ class ComponentLoader {
   }
 }
 
+// Mobile menu toggle functionality
+function initializeMobileMenu() {
+  const mobileButton = document.querySelector('.mobile-menu-button')
+  const mobileDropdown = document.querySelector('.mobile-dropdown')
+
+  if (mobileButton && mobileDropdown) {
+    mobileButton.addEventListener('click', () => {
+      mobileDropdown.classList.toggle('show')
+    })
+
+    // Close dropdown when clicking on a link
+    const dropdownLinks = mobileDropdown.querySelectorAll('a')
+    dropdownLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        mobileDropdown.classList.remove('show')
+      })
+    })
+  }
+}
+
 // Auto-load components when DOM is ready
 document.addEventListener('DOMContentLoaded', async () => {
   const components = [
@@ -44,4 +64,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   ]
 
   await ComponentLoader.loadComponents(components)
+
+  // Initialize mobile menu after components are loaded
+  initializeMobileMenu()
 })

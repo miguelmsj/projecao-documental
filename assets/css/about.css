@@ -5,6 +5,51 @@
   padding: 64px 128px;
 }
 
+/* Mobile responsive padding */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 40px 20px;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .about-container {
+    max-width: 100vw;
+  }
+
+  /* Reduce large paddings on mobile */
+  .ocimar {
+    padding-left: 15px;
+  }
+
+  .paulo {
+    padding-right: 15px;
+  }
+
+  /* Stack image containers on very small screens */
+  .about-image-container-small {
+    flex-direction: column;
+    height: auto;
+    gap: 20px;
+  }
+
+  .small-image-container {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .label-container {
+    width: 100%;
+    text-align: center;
+  }
+
+  .ocimar-label,
+  .paulo-label {
+    padding: 0;
+    text-align: center;
+  }
+}
+
 .about-container {
   display: flex;
   flex-direction: column;
