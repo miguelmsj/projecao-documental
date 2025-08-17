@@ -20,7 +20,7 @@
 }
 
 .service-box {
-  background-color: #e6e6e6;
+  background-color: var(--color-background-light);
   padding: 50px 50px 20px 50px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   max-width: 85%;
@@ -28,19 +28,19 @@
 }
 
 .service-box:nth-child(1) {
-  border-top: 3px solid #b33c00;
+  border-top: 3px solid var(--color-accounting);
 }
 
 .service-box:nth-child(2) {
-  border-top: 3px solid #8a024a;
+  border-top: 3px solid var(--color-fiscal);
 }
 
 .service-box:nth-child(3) {
-  border-top: 3px solid #00579e;
+  border-top: 3px solid var(--color-personnel);
 }
 
 .service-box:nth-child(4) {
-  border-top: 3px solid #196b00;
+  border-top: 3px solid var(--color-documentation);
 }
 
 .service-box ul {
