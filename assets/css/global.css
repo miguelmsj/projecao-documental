@@ -26,6 +26,9 @@
   --color-background-medium: #bbb;
   --color-background-dark: #999;
   --color-text-dark: #333;
+
+  /* Layout */
+  --max-content-width: 1000px;
 }
 
 html {
@@ -65,7 +68,7 @@ p {
   font-weight: 300;
 }
 
-.section {
+.default-section {
   height: 700px;
   display: flex;
   align-items: center;

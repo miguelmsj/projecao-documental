@@ -5,7 +5,7 @@
   padding: 64px 128px;
 }
 
-/* Mobile responsive padding */
+/* Mobile responsive padding and layout switch */
 @media (max-width: 768px) {
   .about-section {
     padding: 40px 20px;
@@ -17,36 +17,79 @@
     max-width: 100vw;
   }
 
-  /* Reduce large paddings on mobile */
-  .ocimar {
-    padding-left: 15px;
+  /* Hide desktop layout on mobile */
+  .about-image-container-small,
+  .about-image-container-big {
+    display: none !important;
   }
 
-  .paulo {
-    padding-right: 15px;
+  /* Show mobile layout */
+  .team-member {
+    display: flex !important;
   }
 
-  /* Stack image containers on very small screens */
-  .about-image-container-small {
+  .about-team-container {
+    display: flex;
     flex-direction: column;
-    height: auto;
-    gap: 20px;
+    gap: 24px;
+    margin: 24px 0;
   }
 
-  .small-image-container {
+  .team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .team-image-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    text-align: center;
+    background-color: white;
+    margin-bottom: 16px;
+    border: 3px solid #f0f0f0;
   }
 
-  .label-container {
+  .team-image-container img {
     width: 100%;
-    text-align: center;
+    height: 100%;
+    object-fit: cover;
   }
 
-  .ocimar-label,
-  .paulo-label {
-    padding: 0;
-    text-align: center;
+  .team-member.norberto .team-image-container {
+    width: 180px;
+    height: 180px;
+    border: 4px solid #333;
+  }
+
+  .team-info {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .team-info h4,
+  .team-info h5 {
+    margin-bottom: 8px;
+    color: #333;
+  }
+
+  .team-info p {
+    margin-bottom: 8px;
+  }
+
+  .team-subtitle {
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 12px !important;
+  }
+
+  .team-member.norberto .team-info {
+    max-width: 100%;
   }
 }
 
@@ -72,67 +115,81 @@
   font-size: 16px;
 }
 
-.about-image-container-small {
-  display: flex;
-  height: 240px;
-  justify-content: space-between;
+/* Desktop layout - original side-by-side design */
+.about-team-container {
   margin: 16px 0;
 }
 
-.small-image-container {
-  display: flex;
-  padding-top: 48px;
+/* Hide mobile layout on desktop by default */
+.team-member {
+  display: none;
 }
 
-.ocimar {
-  padding-left: 32px;
-}
+/* Desktop only styles - hide on mobile */
+@media (min-width: 769px) {
+  .about-image-container-small {
+    display: flex;
+    height: 240px;
+    justify-content: space-between;
+    margin: 16px 0;
+  }
 
-.paulo {
-  padding-right: 32px;
-  justify-content: flex-end;
-}
+  .small-image-container {
+    display: flex;
+    padding-top: 48px;
+  }
 
-.small-image-container img {
-  height: 85%;
-}
+  .ocimar {
+    padding-left: 32px;
+  }
 
-.label-container {
-  width: 40%;
-  padding-top: 16px;
-}
+  .paulo {
+    padding-right: 32px;
+    justify-content: flex-end;
+  }
 
-.ocimar-label {
-  padding-left: 32px;
-}
-.paulo-label {
-  text-align: right;
-  padding-right: 32px;
-}
+  .small-image-container img {
+    height: 85%;
+  }
 
-.about-image-container-big {
-  display: flex;
-  align-items: center;
-  background-color: white;
-  height: 260px;
-  border-top-left-radius: 150px;
-  border-bottom-left-radius: 150px;
-  border-right: 3px solid black;
-}
+  .label-container {
+    width: 40%;
+    padding-top: 16px;
+  }
 
-.about-image-container-big img {
-  width: auto;
-  height: 100%;
-}
+  .ocimar-label {
+    padding-left: 32px;
+  }
 
-.label-container-big {
-  margin-left: 16px;
-}
+  .paulo-label {
+    text-align: right;
+    padding-right: 32px;
+  }
 
-.label-container-big h4 {
-  margin-bottom: 6px;
-}
+  .about-image-container-big {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    height: 260px;
+    border-top-left-radius: 150px;
+    border-bottom-left-radius: 150px;
+    border-right: 3px solid black;
+  }
 
-.label-container-big-subtitle {
-  margin-bottom: 12px;
+  .about-image-container-big img {
+    width: auto;
+    height: 100%;
+  }
+
+  .label-container-big {
+    margin-left: 16px;
+  }
+
+  .label-container-big h4 {
+    margin-bottom: 6px;
+  }
+
+  .label-container-big-subtitle {
+    margin-bottom: 12px;
+  }
 }
